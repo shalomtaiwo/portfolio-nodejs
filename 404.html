@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=edge"
+		/>
+		<title>404 - Not found</title>
+		<meta
+			name="description"
+			content=""
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<style>
+			* {
+				font-family: "Poppins", sans-serif;
+			}
+			body {
+				background: #242424;
+			}
+			.body {
+				display: flex;
+			}
+
+			/* Header style */
+			header {
+				width: 80px;
+				height: 92vh;
+				max-height: 100%;
+				border-radius: 79px;
+				background: #242424;
+				box-shadow: -17px 17px 34px #1f1f1f, 17px -17px 34px #292929;
+				margin: 10px 0;
+				padding: 10px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				align-items: center;
+			}
+			.logo {
+				cursor: pointer;
+			}
+			.logo img {
+				width: 45px;
+			}
+			a.menu-item {
+				text-decoration: none;
+				color: white;
+			}
+			.menu-item {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				align-content: center;
+				padding: 10px 10px 0 10px;
+				cursor: pointer;
+				margin: 5px 5px 5px 5px;
+				width: 45px;
+			}
+			/* Let's add something responsive here */
+			.menu-item:hover {
+				border-radius: 79px;
+				background: #242424;
+				box-shadow: inset -17px 17px 34px #1f1f1f, inset 17px -17px 34px #292929;
+			}
+			.menu-icon {
+				margin-bottom: -17px;
+			}
+			.menu-icon ion-icon {
+				font-size: 20px;
+				color: white;
+			}
+			.profile {
+				padding: 13px;
+				border-radius: 50px;
+				background: #e0e0e0;
+				box-shadow: inset 20px 20px 60px #bebebe, inset -20px -20px 60px #ffffff;
+				cursor: pointer;
+			}
+			.mobile-menu {
+				display: none;
+			}
+			/* Let's make it a bit responsive */
+			@media screen and (max-width: 767px) {
+				header {
+					width: 55px;
+				}
+				.menu-item {
+					width: 30px;
+				}
+				.menu-label {
+					display: none;
+				}
+				.menu-icon {
+					margin: 8px 0 10px 0;
+				}
+				.menu-icon ion-icon {
+					font-size: 22px;
+				}
+				.mobile-menu {
+					display: block;
+					cursor: pointer;
+				}
+				.mobile-menu ion-icon {
+					font-size: 22px;
+				}
+			}
+
+			/* Let's make it extra responsive */
+			@media screen and (max-width: 600px) {
+				.body {
+					display: block;
+				}
+				header {
+					position: absolute;
+					flex-direction: row;
+					width: 100%;
+					max-width: 90%;
+					height: 50px;
+					max-height: 50px;
+					margin: 0 0 20px 10px;
+					bottom: 0;
+				}
+				.menu-item {
+					flex-direction: row;
+					justify-content: space-around;
+					width: fit-content;
+					margin: 0 2px;
+					padding: 8px 10px;
+					height: fit-content;
+				}
+				.menu-item ion-icon {
+					font-size: 25px;
+				}
+				.menu-icon {
+					margin: 0;
+				}
+				nav {
+					display: flex;
+				}
+				.mobile-menu {
+					display: none;
+				}
+			}
+
+			@media screen and (max-width: 400px) {
+				.menu-item {
+					display: none;
+				}
+				.mobile-menu {
+					display: block;
+					width: 60px;
+				}
+				.mobile-menu ion-icon {
+					font-size: 28px;
+				}
+				header {
+					max-width: 85%;
+				}
+			}
+		</style>
+		<!--[if lt IE 7]>
+			<p class="browsehappy">
+				You are using an <strong>outdated</strong> browser. Please
+				<a href="#">upgrade your browser</a> to improve your experience.
+			</p>
+		<![endif]-->
+
+		<div class="body">
+			<!-- Adding the header -->
+			<header>
+				<div class="logo">
+					<img
+						src="https://static.vecteezy.com/system/resources/previews/003/563/444/original/kids-faces-child-expression-faces-little-boys-girls-cartoon-avatars-collection-free-vector.jpg"
+					/>
+				</div>
+				<div class="mobile-menu">
+					<ion-icon name="apps-outline"></ion-icon>
+				</div>
+				<nav>
+					<a
+						class="menu-item"
+						href="/home"
+					>
+						<span class="menu-icon"><ion-icon name="home"></ion-icon></span>
+						<p class="menu-label">Home</p>
+					</a>
+					<a
+						class="menu-item"
+						href="/about"
+					>
+						<span class="menu-icon"><ion-icon name="bulb"></ion-icon></span>
+						<p class="menu-label">About</p>
+					</a>
+					<a
+						class="menu-item"
+						href="/contact"
+					>
+						<span class="menu-icon"><ion-icon name="mail"></ion-icon></span>
+						<p class="menu-label">contact</p>
+					</a>
+				</nav>
+				<div class="profile">
+					<ion-icon
+						name="person-circle"
+						size="large"
+					></ion-icon>
+				</div>
+			</header>
+
+			<!-- Main -->
+			<main>
+				<h3>Oops, page doesn't exist.</h3>
+			</main>
+		</div>
+		<!-- Adding Icons using Ionic -->
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+		></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+		></script>
+	</body>
+</html>

@@ -1,0 +1,313 @@
+* {
+	font-family: "Poppins", sans-serif;
+}
+body {
+	background: #242424;
+	width: 100%;
+	overflow-x: hidden;
+}
+.body {
+	display: flex;
+	scroll-behavior: smooth;
+}
+/* width */
+::-webkit-scrollbar {
+	width: 1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #000000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+
+/* Header style */
+header {
+	position: fixed;
+	width: 80px;
+	height: 92vh;
+	max-height: 100%;
+	border-radius: 79px;
+	background: #242424;
+	box-shadow: -17px 17px 34px #1f1f1f, 17px -17px 34px #292929;
+	margin: 10px 0;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	z-index: 9999999;
+}
+.logo {
+	cursor: pointer;
+}
+.logo img {
+	width: 45px;
+}
+a.menu-item {
+	text-decoration: none;
+	color: white;
+}
+.menu-item {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	padding: 10px 10px 0 10px;
+	cursor: pointer;
+	margin: 5px 5px 5px 5px;
+	width: 45px;
+	font-size: 13px;
+}
+/* Let's add something responsive here */
+.menu-item:hover {
+	border-radius: 79px;
+	background: #242424;
+	box-shadow: inset -17px 17px 34px #1f1f1f, inset 17px -17px 34px #292929;
+}
+.menu-icon {
+	margin-bottom: -17px;
+}
+.menu-icon ion-icon {
+	font-size: 20px;
+	color: white;
+}
+.profile {
+	padding: 13px;
+	border-radius: 50px;
+	background: #e0e0e0;
+	box-shadow: inset 20px 20px 60px #bebebe, inset -20px -20px 60px #ffffff;
+	cursor: pointer;
+}
+.mobile-menu {
+	display: none;
+}
+/* Let's make it a bit responsive */
+@media screen and (max-width: 767px) {
+	header {
+		width: 55px;
+	}
+	.menu-item {
+		width: 30px;
+	}
+	.menu-label {
+		display: none;
+	}
+	.menu-icon {
+		margin: 8px 0 10px 0;
+	}
+	.menu-icon ion-icon {
+		font-size: 22px;
+	}
+	.mobile-menu {
+		display: block;
+		cursor: pointer;
+	}
+	.mobile-menu ion-icon {
+		font-size: 22px;
+	}
+}
+
+/* Let's make it extra responsive */
+@media screen and (max-width: 600px) {
+	.body {
+		display: block;
+	}
+	header {
+		position: fixed;
+		flex-direction: row;
+		width: 100%;
+		max-width: 90%;
+		height: 50px;
+		max-height: 50px;
+		margin: 0 0 20px 10px;
+		bottom: 0;
+	}
+	.menu-item {
+		flex-direction: row;
+		justify-content: space-around;
+		width: fit-content;
+		margin: 0 2px;
+		padding: 8px 10px;
+		height: fit-content;
+	}
+	.menu-item ion-icon {
+		font-size: 25px;
+	}
+	.menu-icon {
+		margin: 0;
+	}
+	nav {
+		display: flex;
+	}
+	.mobile-menu {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.menu-item {
+		display: none;
+	}
+	.mobile-menu {
+		display: block;
+		width: 60px;
+	}
+	.mobile-menu ion-icon {
+		font-size: 28px;
+	}
+	header {
+		max-width: 85%;
+	}
+}
+
+main {
+	margin: 10px 20px 10px 120px;
+	width: 100%;
+}
+
+.profileBio {
+	padding: 10px 15px;
+	color: rgba(255, 255, 255, 0.817);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.bio {
+	width: 95%;
+}
+.bio p {
+	text-align: justify;
+	font-size: 15px;
+	letter-spacing: 1px;
+	line-height: 32px;
+	cursor: pointer;
+	transition: 0.8s;
+}
+.bio p:hover {
+	color: #e4c465;
+}
+.title {
+	color: #fff !important;
+	text-align: center;
+}
+
+.meter {
+	height: 5px;
+	position: relative;
+	background: #f3efe6;
+	overflow: hidden;
+	margin-top: 20px;
+}
+
+.meter span {
+	display: block;
+	height: 100%;
+}
+
+.progress {
+	background-color: #e4c465;
+	animation: progressBar 3s ease-in-out;
+	animation-fill-mode: both;
+	cursor: pointer;
+	transition: 0.8s;
+}
+.progress:hover {
+	background-color: #098e9b;
+}
+
+@keyframes progressBar {
+	0% {
+		width: 0;
+	}
+	100% {
+		width: 100%;
+	}
+}
+.skills{
+	display: flex;
+}
+.skill-title {
+	color: rgba(255, 255, 255, 0.87);
+	font-size: 15px;
+}
+.my-skills {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 50%;
+}
+.my-skills .profileSkill {
+	background: #242424;
+	box-shadow: 10px 10px 29px #1d1d1d, -10px -10px 29px #2b2b2b;
+	width: 70%;
+	padding: 20px;
+	border-radius: 15px;
+}
+.fun-fact {
+	margin: 30px 0 50px 0;
+}
+.fun-fact-boxes {
+	display: flex;
+}
+.ff-box {
+	border: #098e9b 1px solid;
+	width: 25%;
+	height: 90px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	color: white;
+	border-radius: 2px;
+	margin: 0 5px;
+	transition: 0.5s;
+	cursor: pointer;
+}
+.ff-box:hover{
+	border: violet 1px solid;
+	transition: 0.5s;
+}
+.ff-box ion-icon {
+	color: violet;
+	font-size: 25px;
+	cursor: pointer;
+	-webkit-animation: spin 4s linear infinite;
+	-moz-animation: spin 4s linear infinite;
+	animation: spin 4s linear infinite;
+	transition: 1s;
+}
+@-moz-keyframes spin {
+	100% {
+		-moz-transform: rotate(360deg);
+	}
+}
+@-webkit-keyframes spin {
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+@keyframes spin {
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+.ff-box ion-icon:hover{
+	color: #098e9b;
+	animation: none;
+	transition: 1s;
+}
